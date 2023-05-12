@@ -2,20 +2,19 @@ def search(numbers, start, end):
     min_element = numbers[start]
     min_element_index = start
 
-    for i in range(start + 1, end): # Busca pelo menor elemento
+    for i in range(start + 1, end):
         if numbers[i] < min_element:
             min_element = numbers[i]
             min_element_index = i
 
-    return min_element_index # Retorna a posição do menor elemento
+    return min_element_index
 
 def selection_sort(numbers):
     n = len(numbers)
 
-    for index in range(n - 1): # Início da iteração para ordenar os N-1 elementos
+    for index in range(n - 1):
         min_element_index = search(numbers, index, n)
-        numbers[index], numbers[min_element_index] = numbers[min_element_index], numbers[index] # Trocando os elementos utilizando desempacotamento.
-
+        numbers[index], numbers[min_element_index] = numbers[min_element_index], numbers[index]
     return numbers
 
 numbers = [7, 5, 9, 2, 6, 8]
