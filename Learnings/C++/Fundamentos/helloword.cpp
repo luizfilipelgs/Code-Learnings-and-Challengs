@@ -5,7 +5,8 @@ using namespace std; // faz não ser necessario digitar std:: antes de cada uso.
 
 int main() {
     
-    cout << "Hello, World!!!!!!!" << endl; // count equivale ao printf ou ao console.log, e endl quebra a linha
+    cout << "Hello, World!!!!!!!" << endl; // count equivale ao printf ou ao console.log, e endl quebra a linha ou \n
+    cout << "Quebrando a linha \n de outra forma ...";
     return 0;
 }
 
