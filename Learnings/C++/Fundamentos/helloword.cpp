@@ -1,13 +1,11 @@
-#include <iostream>
-#include <stdio.h>
+#include <iostream> // usada para entrada e saída de dados
 
-using namespace std;
-
-#include <iostream>
+using namespace std; // faz não ser necessario digitar std:: antes de cada uso.
+//std::cout << "Hello, World!!!!!!!" << std::endl; ----- Caso não houvesse 'o using namespace std;'.
 
 int main() {
-    //std::cout << "Hello, World!!!!!!!" << std::endl; ----- Caso não houvesse 'o using namespace std;' na linha 4.
-    cout << "Hello, World!!!!!!!" << endl;
+    
+    cout << "Hello, World!!!!!!!" << endl; // count equivale ao printf ou ao console.log, e endl quebra a linha
     return 0;
 }
 
