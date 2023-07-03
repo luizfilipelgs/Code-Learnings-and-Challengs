@@ -1,0 +1,58 @@
+# Arquivos de compilação e execução
+*.exe
+*.dll
+*.pdb
+*.class
+
+# Arquivos de log e relatórios
+*.log
+*.rpt
+*.swp
+*.swo
+
+# Diretórios de dependências e bibliotecas
+/node_modules/
+/bower_components/
+
+# Arquivos e diretórios específicos para linguagens de programação
+# por exemplo, para Python:
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Arquivos gerados pelo IDE ou editor de código
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de configuração do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de chaves e senhas
+*.key
+*.pem
+*.env
+
+# Arquivos de cache
+/cache/
+/public/cache/
+
+# Arquivos de upload
+/uploads/
+/public/uploads/
+
+# Arquivos específicos para determinadas ferramentas
+# por exemplo, para Docker:
+.dockerignore
+Dockerfile
+
+# Arquivos específicos para ambientes de desenvolvimento
+.env
+.env.local
+.env.*.local
