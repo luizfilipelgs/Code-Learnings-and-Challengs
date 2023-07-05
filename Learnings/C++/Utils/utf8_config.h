@@ -17,7 +17,7 @@ Em seus programas C++, inclua o arquivo de cabeçalho utf8_config.h e chame a fu
 EX:
 
 #include <iostream>
-#include "utf8_config.h"
+#include "utf8_config.h" // #include "../Utils/utf8_config.h"
 
 int main() {
   setupUTF8Console();
