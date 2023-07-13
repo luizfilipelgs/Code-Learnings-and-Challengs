@@ -15,14 +15,18 @@ int main() {
   cout << endl << "Que horas são ?" << endl;
   cin >> horas;
 
-  if (horas == 8) {
+  if (horas >= 7 && horas <= 9) {
     cout << endl << cafe << endl;
-  } else if (horas == 12) {
+  } else if (horas >= 11 && horas <= 13) {
     cout << endl << almoco << endl;
-  } else if (horas == 18) {
+  } else if (horas >= 18 && horas <= 20) {
     cout << endl << janta << endl;
   } else {
     cout << endl << "Espere a hora da proxima refeição" << endl;
+  }
+
+  if (horas) {
+    cout << endl << "ok";
   }
 
   return 0;
