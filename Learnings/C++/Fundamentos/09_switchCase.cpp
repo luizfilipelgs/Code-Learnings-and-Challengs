@@ -34,6 +34,24 @@ int main() {
     default:
       cout << "Dia da semana inválido";
   }
+  cout << endl;
+
+  switch (diaDaSemana) {    //Opção de multiplus Cases 
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      cout << "WORK";
+      break;
+    case 1:
+    case 7:
+      cout << "Day off";
+      break;
+  }
 
   return 0;
 }
+
+
+// Obs: Da pra fazer switchs alinhados, 
