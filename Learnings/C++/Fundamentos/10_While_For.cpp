@@ -19,6 +19,12 @@ int main() {
     cout << endl << " valor de n agora é: " << n ;
   } while (n >= 1);
 
+  cout << "\n------------------\n";
+
+  for (int i = 0; i <= 10; i++) {
+    cout << endl << " valor de I agora é: " << i ;
+  }
+  
   return 0;
 }
 
