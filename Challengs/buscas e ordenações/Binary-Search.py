@@ -26,7 +26,7 @@ def binary_search(numbers, target):
             }
 
 numbers = [2, 3, 4, 10, 40, 50, 77, 99, 109, 200]
-target = 51
+target = 77
 
 result = binary_search(numbers, target)
 
