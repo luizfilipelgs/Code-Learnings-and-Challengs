@@ -1,3 +1,7 @@
-/* func helloWorld() string {
-	return 'hello GO Wordl'
-} */
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
