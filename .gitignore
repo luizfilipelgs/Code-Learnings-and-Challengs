@@ -51,6 +51,7 @@ Thumbs.db
 # por exemplo, para Docker:
 .dockerignore
 Dockerfile
+volume-mysql
 
 # Arquivos específicos para ambientes de desenvolvimento
 .env
