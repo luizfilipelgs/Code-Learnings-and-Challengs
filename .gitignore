@@ -11,7 +11,7 @@
 *.swo
 
 # Diretórios de dependências e bibliotecas
-/node_modules/
+node_modules
 /bower_components/
 
 # Arquivos e diretórios específicos para linguagens de programação
