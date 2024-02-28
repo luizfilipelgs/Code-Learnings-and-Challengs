@@ -1,29 +1,32 @@
 version: '3'
 
-services:
+services: # Define os serviços (containers) que compõem sua aplicação.
 
   app:
     build: 
-      context: node
+      context: node # Caminho para o diretório contendo o Dockerfile (assumindo 'node' como diretório relativo ao arquivo docker-compose.yml).
     container_name: app
+    entrypoint: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh  # Substitui o ponto de entrada padrão para esperar que o banco de dados fique disponível antes de iniciar a aplicação.
     networks:  
-      - node-network
+      - node-network # Conecta-se à rede 'node-network'.
     volumes: 
-      - ./node:/usr/src/app
-    tty: true
+      - ./node:/usr/src/app # Mapeia o diretório 'node' do host para '/usr/src/app' no container.
+    tty: true # Aloca um pseudo-TTY, útil para manter o container rodando.
     ports:
-      - "3005:3005"
+      - "3005:3005" # Mapeia a porta 3005 do host para a porta 3005 do container.
+    depends_on: # Especifica que 'app' depende do serviço 'db' e deve esperar por ele para iniciar.
+      - db
 
   db:
     image: mysql:5.7
     command: --innodb-use-native-aio=0
     container_name: db
-    restart: always
+    restart: always # Política de reinício do container.
     tty: true
     volumes: 
       - ./volume-mysql:/var/lib/mysql
 
-    environment:
+    environment: # Variáveis de ambiente para configurar o MySQL.
       MYSQL_DATABASE: nodedb
       MYSQL_USER: user
       MYSQL_PASSWORD: password
@@ -31,8 +34,8 @@ services:
     networks:  
       - node-network
       
-networks:
-  node-network:
-    driver: bridge
+networks:  # Define as redes usadas pelos serviços.
+  node-network:  # Define uma rede personalizada chamada 'node-network'.
+    driver: bridge  # Usa o driver de rede 'bridge'.
 
     
